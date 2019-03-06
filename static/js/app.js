@@ -25,6 +25,29 @@ tableData.forEach((record) => {
 });
 
 function generate_table() {
+
+
+	var userDate = tableData.filter(filterDate);
+
+	// creating all cells
+	userDate.forEach((record) => {
+
+	var row = document.createElement("tr");
+
+	Object.entries(record).forEach(([key, value]) => {
+
+    	var cell = document.createElement("td");
+    	var cellText = document.createTextNode(`${value}`);
+		cell.appendChild(cellText);
+      	row.appendChild(cell);
+  	});
+
+      	tblbody.appendChild(row);		
+
+
+});
+
+
 }
 
 
