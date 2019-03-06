@@ -26,7 +26,6 @@ tableData.forEach((record) => {
 
 function generate_table() {
 
-
 	var userDate = tableData.filter(filterDate);
 
 	// creating all cells
