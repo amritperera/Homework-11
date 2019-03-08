@@ -55,11 +55,6 @@ function generate_table() {
 	});
 }
 
-// Create a custom filtering function
-function filterDate(date) {
-  return date.datetime == document.getElementById('datetime').value;
-;
-}
 
 // Get the input field
 var input = document.getElementById("datetime");
@@ -75,6 +70,12 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
+
+// Create a custom filtering function
+function filterDate(date) {
+  return date.datetime == document.getElementById('datetime').value;
+;
+}
 
 // filter() uses the custom function as its argument
 var userDate = tableData.filter(filterDate);
