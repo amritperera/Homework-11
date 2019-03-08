@@ -29,7 +29,12 @@ function generate_table() {
 	var Table = document.getElementById("ufo-table-body");
 	Table.innerHTML = "";
 
-	var userDate = tableData.filter(filterDate);
+	if (document.getElementById('datetime').value == '') {
+		var userDate = tableData;
+	} else {
+		var userDate = tableData.filter(filterDate);
+
+	}
 
 	// creating all cells
 	userDate.forEach((record) => {
