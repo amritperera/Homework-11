@@ -26,6 +26,9 @@ tableData.forEach((record) => {
 
 function generate_table() {
 
+	var Table = document.getElementById("ufo-table-body");
+	Table.innerHTML = "";
+
 	var userDate = tableData.filter(filterDate);
 
 	// creating all cells
@@ -52,7 +55,8 @@ function generate_table() {
 
 // Create a custom filtering function
 function filterDate(date) {
-  return date.datetime == '1/11/2010';
+  return date.datetime == document.getElementById('datetime').value;
+;
 }
 
 // filter() uses the custom function as its argument
